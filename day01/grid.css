@@ -1,0 +1,79 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+}
+
+ul{
+  padding: 0;
+  list-style-type: none;
+  display: grid;
+  height: 300px;
+  border: 5px solid red;
+  border-radius: 10px;
+
+  /* 그리드 컨테이너에는 fr도 많이 쓴다. */
+  /* auto-fill : 쓰고 남는 공간이 있거든 내버려 둔다.
+     auto-fit: 쓰고 남는 공간이 있으면 내가 채운다. */
+  grid-template-columns: repeat(3, 50px);
+  grid-template-rows: repeat(3, 50px);
+
+  align-content: space-between;
+  justify-content: space-between;
+  /* align-items: center;
+  justify-items: center; */
+
+  /* grid-template-rows: 100px 50px; */
+
+/* 앞의 것이 위아래 방향, 뒤의 것이 좌우 방향 */
+  gap: 5px;
+
+  /* .은 빈칸을 의미한다.(.의 개수는 무관하다.) */
+  /* grid-template-areas: 
+    "cat cat dog"
+    "tur car car"
+    "mon ham ham"; */
+
+}
+
+li{
+  color: black;
+  background-color: skyblue;
+  border: 3px solid yellow;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+/*
+li:nth-child(1){
+  grid-area: cat;
+}
+li:nth-child(2){
+  grid-area: dog;
+}
+li:nth-child(3){
+  grid-area: ham;
+}
+li:nth-child(4){
+  grid-area: tur;
+}
+li:nth-child(5){
+  grid-area: car;
+}
+li:nth-child(6){
+  grid-area: mon;
+}
+*/
+
+/*
+li:nth-child(5){
+  align-self: start;
+  justify-self: end;
+}
+*/
+
